@@ -1,15 +1,20 @@
 import os
+from dotenv import load_dotenv
 from openai import OpenAI
 
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
+
 client = OpenAI(
-    api_key = "sk-proj-5AnjLnqzLJeOnQuL4yfXT3BlbkFJTq3DUIwpSIVt6kKbqK0z"
+    api_key = api_key
 )
 
 chat_completion = client.chat.completions.create(
     messages = [
         {
             "role": "user",
-            "content": "ßWhat team won nba finals 2012",
+            "content": "What team won nba finals 2012",
         }
     ],
     model = "gpt-3.5-turbo"
