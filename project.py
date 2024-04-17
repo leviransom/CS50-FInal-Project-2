@@ -14,7 +14,7 @@ chat_completion = client.chat.completions.create(
     messages = [
         {
             "role": "user",
-            "content": "What team won nba finals 2012",
+            "content": "Give me a beginner level Python problem.",
         }
     ],
     model = "gpt-3.5-turbo"
